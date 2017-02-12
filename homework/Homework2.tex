@@ -1,0 +1,59 @@
+%AUTHOR: Douglas Rudolph
+%FILE: Hw_Assignment_2.tex
+%COURSE: Design & Anlysis of Computer Algorthims
+%Professor: Dr. Kalantari
+
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+\title{Design and Analysis of Computer Algorithms - Hw 2}
+\author{Douglas Rudolph}
+\maketitle
+ 
+\begin{problem}{1}
+Consider the binary numbers $x = 10011011$ and $y = 10111010$. Decomposing $x$ using $a = 1001$, $b = 1011$
+and $y$ using $c = 1011$, $d = 1010$, compute the product $x*y$ using the ordinary way and the way done in
+divide-and-conquer method by forming $w1 = a + b$, $w2 = c + d$, $u = w1w2$, $v = ac$, $w = bd$. Recall xy =
+$2nv + 2\frac{n}{2} (u*v*w) + w$. Each multiplication by 2 amounts to a shift. Count the binary operations in
+each method.
+\end{problem}
+ 
+
+\begin{problem}{2}
+You are given an infinite array $A[i]$ in which the first $n$ elements are integers in sorted order and the rest
+are filled with $∞$. You are not given $n$. Describe an algorithm that takes as input an integer $x$ and finds a
+position in the array containing $x$, if such a position exists, in $O(\log n)$ time.
+\end{problem}
+
+\begin{problem}{3}
+Solve each of the recurrence relations and give bound for each. You can use the master theorem if applicable
+	\begin{center}
+		\begin{tabular}{c c c}
+			$T(n)$ &$=$ &$5T(\frac{n}{4}) + n$ \\
+		 	$T(n)$ &$=$ &$7T(\frac{n}{7}) + n$ \\
+		 	$T(n)$ &$=$ &$9T(\frac{n}{4}) + n^{2}$ \\
+		 	$T(n)$ &$=$ &$8T(\frac{n}{2}) + n^{3}$ \\
+		 	$T(n)$ &$=$ &$49T(\frac{n}{25}) + n^{3.5}\log n$ \\	
+		 	$T(n)$ &$=$ &$T(n^{.5}) + 1$ \\
+		\end{tabular}
+	\end{center}
+\end{problem}
+
+\begin{problem}{4}
+Find the coefficients of the polynomial $p(x) = a_{2}x^{2}+a_{1}x+a_{0}$ such that $p(1) = 2$, $p(2) = 1$, $p(3) = 0$.
+\end{problem}
+
+\begin{problem}{5}
+Consider the array = $[25, 34, 63, 29, 66, 47, 12, 17]$. Apply the Partition (Split) procedure in Quicksort, as described in class, to this array using the first element as the pivot.
+\end{problem}
+
+\end{document}
