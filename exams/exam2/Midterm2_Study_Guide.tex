@@ -157,10 +157,9 @@
 
   
 		
-	The \textbf{General Algorithm} to \textit{Breadth First Search} is to first look at a vertex and enqueue said vertex. From there, we mark that we visited said vertex and enqueue the neighboring unseen verticies. Repeat this process until the queue is empty.  
+	The \textbf{General Algorithm} to \textit{Breadth First Search} is to first look at a vertex and enqueue said vertex. From there, we mark that vertex as \textit{visited}, dequeue the \textit{visited} vertex, and enqueue the neighboring unseen verticies. Repeat this process until the queue is empty.  
 		
-    	
-    
+
     \begin{minipage}{.4\textwidth}
         \begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=2cm]
                 \node[state]  			(1) []           {$1$};
@@ -271,4 +270,3 @@ while U $\neq$ V \\
 \tab \tab if weight(v, closest(v)) $>$ w(v, next) then set closest(v) = next; \\ 
 The efficiency is $O(|V|^2)$ as the running time is dominated by the time it takes to update the closest neighbor of each vertex. 
 \end{document}
-
