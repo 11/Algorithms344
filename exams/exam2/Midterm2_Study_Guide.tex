@@ -13,18 +13,20 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
-\title{Midterm 2}
+\title{Algorithms - CS:344 - Midterm 2 Study Guide}
 \begin{document}
-\maketitle{Midterm 2}
+\maketitle{}
 \section*{DFS}
+
+	The \textbf{General Approach} to applying \textit{Depth First Search} is to pick a starting state and mark the node as visted. Next, recursivley step to the first neighbor from the list of neighbors that is stored within the first vertex. Mark this new node as visted and repeat the process for all $N$ first neighbors or until we reach a node that has already been visited. Once all the first neighbors have been visited, go back one vertex from the previous recursive iteration check the second Neighbor of said vertex. Repeat this process until the vertex you are checking has been seen, and or you reach a node that has no other neighbors. Repeat the process from step 1 and 2 on all nodes until every node has been seen. \\ \\
 	\begin{minipage}{.4\textwidth}
 		\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=2cm]
-                  \node[state]  			(1) []           {$1$};
+                  \node[state]  	      (1) []           {$1$};
                   \node[state]            (2) [below of=1] {$2$};
                   \node[state, accepting] (3) [below of=2] {$3$};
-                  \node[state] 			(4) [right of=1] {$4$};
-                  \node[state]		 	(5) [right of=2] {$5$};
-                  \node[state]		 	(6) [right of=3] {$6$};
+                  \node[state] 			  (4) [right of=1] {$4$};
+                  \node[state]		 	  (5) [right of=2] {$5$};
+                  \node[state]		 	  (6) [right of=3] {$6$};
 
                       \draw[-, line width = 1.8pt] 
                                (3) edge [bend left](1)
@@ -41,9 +43,9 @@
 	\end{minipage}
 	\begin{minipage}{.4\textwidth}
 		\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=2cm]
-                \node[state]  			(1) []           {$1$};
+                \node[state, accepting] (1) []           {$1$};
                 \node[state]            (2) [below of=1] {$2$};
-                \node[state, accepting] (3) [below of=2] {$3$};
+                \node[state]  			(3) [below of=2] {$3$};
                 \node[state] 			(4) [right of=1] {$4$};
                 \node[state]		 	(5) [right of=2] {$5$};
                 \node[state]		 	(6) [right of=3] {$6$};
@@ -64,11 +66,11 @@
     \begin{minipage}{.4\textwidth}
         \begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=2cm]
                   \node[state]  			(1) []           {$1$};
-                  \node[state]            (2) [below of=1] {$2$};
-                  \node[state, accepting] (3) [below of=2] {$3$};
-                  \node[state] 			(4) [right of=1] {$4$};
-                  \node[state]		 	(5) [right of=2] {$5$};
-                  \node[state]		 	(6) [right of=3] {$6$};
+                  \node[state, accepting]	(2) [below of=1] {$2$};
+                  \node[state] 				(3) [below of=2] {$3$};
+                  \node[state] 				(4) [right of=1] {$4$};
+                  \node[state]		 		(5) [right of=2] {$5$};
+                  \node[state]		 		(6) [right of=3] {$6$};
 
                       \draw[-, line width = 1.8pt] 
                                (3) edge [bend left](1)
@@ -86,10 +88,10 @@
     \begin{minipage}{.4\textwidth}
         \vspace{\baselineskip}
         \begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=2cm]
-                      \node[state]  			(1) []           {$1$};
-                      \node[state]            (2) [below of=1] {$2$};
-                      \node[state, accepting] (3) [below of=2] {$3$};
-                      \node[state] 			(4) [right of=1] {$4$};
+                      \node[state]  		(1) []           {$1$};
+                      \node[state]          (2) [below of=1] {$2$};
+                      \node[state] 			(3) [below of=2] {$3$};
+                      \node[state,accepting](4) [right of=1] {$4$};
                       \node[state]		 	(5) [right of=2] {$5$};
                       \node[state]		 	(6) [right of=3] {$6$};
 
@@ -108,11 +110,11 @@
     \end{minipage}
     \begin{minipage}{.4\textwidth}
         \begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=2cm]
-                  \node[state]  			(1) []           {$1$};
-                  \node[state]            (2) [below of=1] {$2$};
-                  \node[state, accepting] (3) [below of=2] {$3$};
+                  \node[state]  		(1) []           {$1$};
+                  \node[state]          (2) [below of=1] {$2$};
+                  \node[state] 			(3) [below of=2] {$3$};
                   \node[state] 			(4) [right of=1] {$4$};
-                  \node[state]		 	(5) [right of=2] {$5$};
+                  \node[state,accepting](5) [right of=2] {$5$};
                   \node[state]		 	(6) [right of=3] {$6$};
 
                       \draw[-, line width = 1.8pt] 
@@ -128,13 +130,32 @@
                                (5) edge (6);       	 		
         \end{tikzpicture}
 	\end{minipage}
+    \begin{minipage}{.4\textwidth}
+        \begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=2cm]
+                  \node[state]  		(1) []           {$1$};
+                  \node[state]          (2) [below of=1] {$2$};
+                  \node[state] 			(3) [below of=2] {$3$};
+                  \node[state] 			(4) [right of=1] {$4$};
+                  \node[state]			(5) [right of=2] {$5$};
+                  \node[state,accepting](6) [right of=3] {$6$};
+
+                      \draw[-, line width = 1.8pt] 
+                               (3) edge [bend left](1)
+                                   edge [thin] (4)
+                                   edge [thin] (5)
+                                   edge [thin] (6)
+                               (2) edge (1)
+                                   edge (4)
+                               (1) edge [thin] (2)
+                               (4) edge (5)
+                                   edge [thin] (3)
+                               (5) edge (6);       	 		
+        \end{tikzpicture}
+	\end{minipage}
  
-
-
-
 \section*{BFS}
 
-    
+  
 		
 	The \textbf{General Algorithm} to Breadth First Search is to first look at a vertex and enqueue said vertex. From there, we mark that we visited said vertex and enqueue the neighboring unseen verticies. Repeat this process until the queue is empty.  
 		
