@@ -144,9 +144,9 @@ Checking to see if a graph is Bipartite can be accomplished by running BFS on a 
   			\node[state]			 (y) [below of=v] {$y$};
 
   			\draw[-, line width=1.8pt] 
-  					(x) edge (w)
-             	        edge [bend left] (y)
-             	        edge (t)
+  					(x) edge node {1} (w)
+             	        edge [bend left] node {1} (y)
+             	        edge node {1} (t)
         	        (w) edge [thin] (r)
 						edge [thin] (s)
 					(s) edge [thin] (r)
@@ -173,14 +173,14 @@ Checking to see if a graph is Bipartite can be accomplished by running BFS on a 
   			\node[state]			 (y) [below of=v] {$y$};
 
   			\draw[-, line width=1.8pt] 
-  					(x) edge (w)
-             	        edge [bend left] (y)
-             	        edge (t)
+  					(x) edge node{1} (w)
+             	        edge [bend left] node{1} (y)
+             	        edge node{1} (t)
         	        (w) edge [thin] (r)
 						edge [thin] (s)
 					(s) edge [thin] (r)
-					(t) edge (u)
-						edge (w)
+					(t) edge node{2} (u)
+						edge node{2} (w)
 					(r) edge [thin] (v)
 					(u) edge [thin] (y);
 					
@@ -205,14 +205,14 @@ Checking to see if a graph is Bipartite can be accomplished by running BFS on a 
   			\node[state]			 (y) [below of=v] {$y$};
 
   			\draw[-, line width=1.8pt] 
-  					(x) edge (w)
-             	        edge [bend left] (y)
-             	        edge (t)
-        	        (w) edge (r)
-						edge (s)
+  					(x) edge node{1} (w)
+             	        edge [bend left] node{1} (y)
+             	        edge node{1} (t)
+        	        (w) edge node{3} (r)
+						edge node{3} (s)
 					(s) edge [thin] (r)
-					(t) edge (u)
-						edge (w)
+					(t) edge node{2} (u)
+						edge node{2} (w)
 					(r) edge [thin] (v)
 					(u) edge [thin] (y);
 					
@@ -383,7 +383,7 @@ Checking to see if a graph is Bipartite can be accomplished by running BFS on a 
 
 	\newpage	
 	
-	\textbf{Question 3: }Given a tree T=(V,E) compute its diameter, i.e. the longest path between two vertices. Do BFS at a node s, find the farthest from s to get a vertex, say t. Then do BFS to from t to find  the farthest from t.   Prove this gives diameter of tree. Diameter of a tree is the longest path in the tree.
+	\textbf{Question 3: }Given a tree T=(V,E) compute its diameter, i.e. the longest path between two vertices. Do $BFS$ at a node $s$, find the farthest from $s$ to get a vertex, say $t$. Then do BFS to from $t$ to find the farthest from $t$. Prove this gives diameter of tree. Diameter of a tree is the longest path in the tree.
 	
 	\textbf{Answer 3: }
 	
@@ -395,7 +395,7 @@ Checking to see if a graph is Bipartite can be accomplished by running BFS on a 
 	
 	\newpage	
 	
-	\textbf{Question 5: }Show that in an indirected graph the sum of the degrees of the vertices is twice the number of edges.
+	\textbf{Question 5: }Show that in an undirected graph, the sum of the degrees of the vertices is twice the number of edges.
 	
 	\textbf{Answer 5: }
 
