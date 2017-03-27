@@ -18,7 +18,7 @@
 \maketitle{}
 \section*{DFS}
 
-	The \textbf{General Approach} to applying \textit{Depth First Search} is to pick a starting state and mark the node as \textit{visted}. Next, recursivley step to the \textit{first neighbor} and recursivley go through the list of neighbors that is stored within the \textit{first neighbor}. Mark this new node as \textit{visted} and repeat the process for all $N$ \textit{first neighbors} or until a vertex that has already been \textit{visited} is reached. Once all the first neighbors have been \textit{visited}, go back one vertex from the previous recursive iteration and check for an unseen \textit{second neighbor} within hte list neighbors of said vertex. Repeat this process until the vertex you are checking has been seen, and or you reach a node that has no other neighbors. Repeat the recursive process until every node has been marked as \textit{visted}. \\ \\
+    The \textbf{General Approach} to applying \textit{Depth First Search} is to pick a starting state and mark the node as \textit{visted}. Next, recursivley step to the \textit{first neighbor} and recursivley go through the list of neighbors that is stored within the \textit{first neighbor}. Mark this new node as \textit{visted} and repeat the process for all $N$ \textit{first neighbors} or until a vertex that has already been \textit{visited} is reached. Once all the first neighbors have been \textit{visited}, go back one vertex from the previous recursive iteration and check for an unseen \textit{second neighbor} within hte list neighbors of said vertex. Repeat this process until the vertex you are checking has been seen, and or you reach a node that has no other neighbors. Repeat the recursive process until every node has been marked as \textit{visted}. \\ \\
 	\begin{minipage}{.4\textwidth}
 		\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=2cm]
                   \node[state]  	      (1) []           {$1$};
@@ -269,4 +269,8 @@ while U $\neq$ V \\
 \tab for all v $\in$ V - U, do \\
 \tab \tab if weight(v, closest(v)) $>$ w(v, next) then set closest(v) = next; \\ 
 The efficiency is $O(|V|^2)$ as the running time is dominated by the time it takes to update the closest neighbor of each vertex. 
+
+
+
+
 \end{document}
