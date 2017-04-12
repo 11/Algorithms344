@@ -1,0 +1,77 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\rhead{\hmwkClass: \hmwkTitle}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Homework Details
+%   - Title
+%   - Due date
+%   - Class
+%   - Section/Time
+%   - Instructor
+%   - Author
+%
+
+\newcommand{\hmwkTitle}{Homework\ \#1}
+\newcommand{\hmwkDueDate}{April 5, 2017}
+\newcommand{\hmwkClass}{Design And Analysis of Algorithms - 344}
+\newcommand{\hmwkClassTime}{Section \#1}
+\newcommand{\hmwkClassInstructor}{Professor Bahman Kalantari}
+\newcommand{\hmwkAuthorName}{\textbf{Douglas Rudolph}}
+
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ at 11:59pm}\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+
+\author{\hmwkAuthorName}
+\date{}
+
+\setlength\parskip{\baselineskip}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+\textbf{Bellman Ford Algorithm}
+
+Graph $G = (V,E)$ is directed $w(u,v) \epsilon R$.
+
+The goal is to find the shortest path from $s$ to all other reachable verticies. In order for Bellman Ford to work, there cannot be a \textit{Negative Cycle}. A \textit{Negative Cycle} is a cycle where the sum of the edge weights are is less than zero. 
+
+\end{document}
